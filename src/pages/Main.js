@@ -6,9 +6,26 @@ import React, { useState } from "react";
 const Main = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState([]);
-  function sayHello() {
+  const [showText, setText] = useState("Featured")
+  const changeText = (text) => setText(text);
 
-    const url = "https://api.itroeix.xyz/apps/category/simp";
+  const setCategory = (category) => {
+
+    const url = `https://api.itroeix.xyz/apps/category/${category}`;
+    fetch(url)
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.log(error));
+
+
+    if (data.length !== 0) {
+      setIsLoading(false);
+    }
+  }
+
+  const setAll = () => {
+
+    const url = `https://api.itroeix.xyz/apps`;
     fetch(url)
       .then((response) => response.json())
       .then((json) => setData(json))
@@ -19,8 +36,10 @@ const Main = () => {
       setIsLoading(false);
     }
     console.log(data);
+    changeText("All")
 
   }
+
   let inputHandler = (e) => {
     if (e.key === "Enter") {
       const url = `https://api.itroeix.xyz/apps/search/${e.target.value}`;
@@ -63,7 +82,17 @@ const Main = () => {
           onKeyPress={inputHandler}
         />
       </div>
-      <button onClick={sayHello}>Default</button>
+      <div class="category">
+        <button onClick={setAll}>All</button>
+        <button onClick={() => {setCategory("ide");changeText("IDE");}}>IDE</button>
+        <button onClick={() => {setCategory("apis");changeText("API's");}}>API's</button>
+        <button onClick={() => {setCategory("video");changeText("Video Editors");}}>Video Editors</button>
+        <button onClick={() => {setCategory("text");changeText("Text Editors");}}>Text Editors</button>
+        <button onClick={() => {setCategory("photo");changeText("Photo Editors");}}>Photo Editors</button>
+
+      </div>
+      <h2>{showText}</h2>
+
       <div class="apps">
         {isLoading ? (
           <h1>Loading...</h1>
