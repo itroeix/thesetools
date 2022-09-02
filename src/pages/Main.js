@@ -78,7 +78,7 @@ const Main = () => {
       </div>
       <div className="search">
         <input
-          placeholder='Buscar'
+          placeholder='Search'
           onKeyPress={inputHandler}
         />
       </div>
