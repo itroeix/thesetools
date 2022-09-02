@@ -8,7 +8,7 @@ const Main = () => {
   const [data, setData] = React.useState([]);
   function sayHello() {
 
-    const url = "http://localhost:4000/apps/category/simp";
+    const url = "https://api.itroeix.xyz/apps/category/simp";
     fetch(url)
       .then((response) => response.json())
       .then((json) => setData(json))
@@ -23,7 +23,7 @@ const Main = () => {
   }
   let inputHandler = (e) => {
     if (e.key === "Enter") {
-      const url = `http://localhost:4000/apps/search/${e.target.value}`;
+      const url = `https://api.itroeix.xyz/apps/search/${e.target.value}`;
       fetch(url)
         .then((response) => response.json())
         .then((json) => setData(json))
@@ -38,7 +38,7 @@ const Main = () => {
     }
   };
   React.useEffect(() => {
-    const url = "http://localhost:4000/apps";
+    const url = "https://api.itroeix.xyz/apps";
     fetch(url)
       .then((response) => response.json())
       .then((json) => setData(json))
