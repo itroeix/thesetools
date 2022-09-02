@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const Main = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState([]);
-  const [showText, setText] = useState("Featured")
+  const [showText, setText] = useState("All")
   const changeText = (text) => setText(text);
 
   const setCategory = (category) => {
