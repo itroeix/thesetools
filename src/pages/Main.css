@@ -1,0 +1,41 @@
+body {
+    display: grid;
+}
+
+input {
+    outline: none;
+    padding: 8px 15px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #D9D9D9;
+    color: #000000;
+    border-radius: 35px;
+    place-items: center;
+    width: 350px;
+}
+
+div.app {
+    float: left;
+    padding: 0px;
+    width: 200px;
+
+}
+
+div.apps {
+    padding: 10px;
+}
+
+img{
+    background-color: #0a0a0a;
+    color: white;
+    padding: 10%;
+    border-radius: 30px;
+}
+h1 {
+    font-size: 58px;
+    background: linear-gradient(to right, #FC6AFF, #45DEFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
