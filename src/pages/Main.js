@@ -84,14 +84,15 @@ const Main = () => {
       </div>
       <div class="category">
         <button onClick={setAll}>All</button>
-        <button onClick={() => {setCategory("ide");changeText("IDE");}}>IDE</button>
-        <button onClick={() => {setCategory("apis");changeText("API's");}}>API's</button>
-        <button onClick={() => {setCategory("video");changeText("Video Editors");}}>Video Editors</button>
-        <button onClick={() => {setCategory("text");changeText("Text Editors");}}>Text Editors</button>
-        <button onClick={() => {setCategory("photo");changeText("Photo Editors");}}>Photo Editors</button>
+        <button onClick={() => { setCategory("ide"); changeText("IDE"); }}>IDE</button>
+        <button onClick={() => { setCategory("apis"); changeText("API's"); }}>API's</button>
+        <button onClick={() => { setCategory("video"); changeText("Video Editors"); }}>Video Editors</button>
+        <button onClick={() => { setCategory("text"); changeText("Text Editors"); }}>Text Editors</button>
+        <button onClick={() => { setCategory("photo"); changeText("Photo Editors"); }}>Photo Editors</button>
 
       </div>
       <h2>{showText}</h2>
+      <p>Icons by icons8.com</p>
 
       <div class="apps">
         {isLoading ? (
