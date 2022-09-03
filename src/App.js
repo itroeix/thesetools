@@ -15,6 +15,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path='/' element={< Main />}></Route>
+          <Route exact path='/share' element={< Main />}></Route>
         </Routes>
       </div>
     </Router>

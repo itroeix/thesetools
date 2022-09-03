@@ -18,7 +18,7 @@ input {
 div.app {
     float: left;
     padding: 0px;
-    width: 200px;
+    width: 170px;
 
 }
 
@@ -50,4 +50,14 @@ button {
     border: none;
     margin: 8px;
     cursor: pointer;
+}
+
+.share {
+    color: #0059ff;
+    text-decoration: none;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
 }

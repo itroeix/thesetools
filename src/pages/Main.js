@@ -91,6 +91,7 @@ const Main = () => {
         <button onClick={() => { setCategory("photo"); changeText("Photo Editors"); }}>Photo Editors</button>
 
       </div>
+      <a class="share" href="/share">Share Tool</a>
       <h2>{showText}</h2>
       <p>Icons by icons8.com</p>
 
@@ -100,9 +101,9 @@ const Main = () => {
         ) : (
           data.map((user) => (
             <div class="app">
-              <a href={user.webUrl}><img src={user.imageUrl}></img></a>
-              <h2>{user.name}</h2>
-              <p>Shared by {user.shared}</p>
+              <a href={user.webUrl}><img src={user.imageUrl}></img></a><br/>
+              <a class="name">{user.name}</a><br/>
+              <a class="shared">Shared by {user.shared}</a>
             </div>
           ))
         )}
