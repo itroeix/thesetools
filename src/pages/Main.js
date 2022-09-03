@@ -88,7 +88,7 @@ const Main = () => {
         <button onClick={() => { setCategory("apis"); changeText("API's"); }}>API's</button>
         <button onClick={() => { setCategory("video"); changeText("Video Editors"); }}>Video Editors</button>
         <button onClick={() => { setCategory("text"); changeText("Text Editors"); }}>Text Editors</button>
-        <button onClick={() => { setCategory("photo"); changeText("Photo Editors"); }}>Photo Editors</button>
+        <button onClick={() => { setCategory("photo"); changeText("Design"); }}>Design</button>
         <button onClick={() => { setCategory("vm"); changeText("Virtual Machines"); }}>Virtual Machines</button>
       </div>
       <a class="share" href="/share">Share Tool</a>
