@@ -13,7 +13,7 @@ const Main = () => {
         <h1>TheseTools</h1><br/>
         <h2>Share Tool Form</h2>
         <button class="formbtn" onClick={goForm}>Go to Google Forms</button><br/>
-        <a class="approvaltext">To avoid some problems, you have to wait for an approval.<br/> Maybe in the future we will add an automated system.</a>
+        <a class="approvaltext">To avoid some problems, you have to wait for an approval.<br/> Maybe in the future I will add an automated system.</a>
       </div>
     </div>
 
