@@ -75,3 +75,20 @@ h2 {
 .approvaltext {
     font-size: 12px;
 }
+
+.dark button {
+    background-color: #0e0e0e;
+}
+
+.dark img {
+    background-color: #0e0e0e;
+}
+
+.dark input {
+    background-color: #0f0f0f;
+}
+
+.dark {
+    background-color: #0a0a0a;
+    color: white;
+}

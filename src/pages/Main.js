@@ -8,7 +8,32 @@ const Main = () => {
   const [data, setData] = React.useState([]);
   const [showText, setText] = useState("All")
   const changeText = (text) => setText(text);
+  const [showDarkText, setDarkText] = useState("Toggle Dark Mode")
+  const changeDarkText = (text) => setDarkText(text);
+  const [darkMode, setDarkMode] = React.useState(false);
 
+  React.useEffect(() => {
+    const json = localStorage.getItem("site-dark-mode");
+    const currentMode = JSON.parse(json);
+    if (currentMode) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+      changeDarkText("Toggle Light Mode")
+    } else {
+      document.body.classList.remove("dark");
+      changeDarkText("Toggle Dark Mode")
+
+    }
+    const json = JSON.stringify(darkMode);
+    localStorage.setItem("site-dark-mode", json);
+  }, [darkMode]);
   const setCategory = (category) => {
 
     const url = `https://api.itroeix.xyz/apps/category/${category}`;
@@ -92,6 +117,9 @@ const Main = () => {
         <button onClick={() => { setCategory("vm"); changeText("Virtual Machines"); }}>Virtual Machines</button>
       </div>
       <a class="share" href="/share">Share Tool</a>
+      <div>
+        <button onClick={() => setDarkMode(!darkMode)}>{showDarkText}</button>
+      </div>
       <h2>{showText}</h2>
       <p>Icons by icons8.com</p>
 
@@ -101,8 +129,8 @@ const Main = () => {
         ) : (
           data.map((user) => (
             <div class="app">
-              <a href={user.webUrl}><img src={user.imageUrl}></img></a><br/>
-              <a class="name">{user.name}</a><br/>
+              <a href={user.webUrl}><img src={user.imageUrl}></img></a><br />
+              <a class="name">{user.name}</a><br />
               <a class="shared">Shared by {user.shared}</a>
             </div>
           ))
