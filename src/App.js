@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Main from './pages/Main'
+import Share from './pages/Share'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path='/' element={< Main />}></Route>
-          <Route exact path='/share' element={< Main />}></Route>
+          <Route exact path='/share' element={< Share />}></Route>
         </Routes>
       </div>
     </Router>
