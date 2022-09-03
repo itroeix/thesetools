@@ -35,7 +35,7 @@ const Main = () => {
     if (data.length !== 0) {
       setIsLoading(false);
     }
-    console.log(data);
+    //console.log(data);
     changeText("All")
 
   }
@@ -52,7 +52,7 @@ const Main = () => {
       if (data.length !== 0) {
         setIsLoading(false);
       }
-      console.log(data);
+      //console.log(data);
 
     }
   };
@@ -68,7 +68,7 @@ const Main = () => {
     if (data.length !== 0) {
       setIsLoading(false);
     }
-    console.log(data);
+    //console.log(data);
   }, [data]);
 
   return (
