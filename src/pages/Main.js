@@ -67,7 +67,9 @@ const Main = () => {
 
   let inputHandler = (e) => {
     if (e.key === "Enter") {
-      const url = `https://api.itroeix.xyz/apps/search/${e.target.value}`;
+      const value = e.target.value
+      const lower = value.toLowerCase()
+      const url = `http://localhost:4000/apps/search/${lower}`;
       fetch(url)
         .then((response) => response.json())
         .then((json) => setData(json))
@@ -113,7 +115,7 @@ const Main = () => {
         <button onClick={() => { setCategory("apis"); changeText("API's"); }}>API's</button>
         <button onClick={() => { setCategory("video"); changeText("Video Editors"); }}>Video Editors</button>
         <button onClick={() => { setCategory("text"); changeText("Text Editors"); }}>Text Editors</button>
-        <button onClick={() => { setCategory("photo"); changeText("Design"); }}>Design</button>
+        <button onClick={() => { setCategory("design"); changeText("Design"); }}>Design</button>
         <button onClick={() => { setCategory("vm"); changeText("Virtual Machines"); }}>Virtual Machines</button>
       </div>
       <a class="share" href="/share">Share Tool</a>
