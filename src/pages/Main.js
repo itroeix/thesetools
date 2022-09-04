@@ -131,11 +131,13 @@ const Main = () => {
         ) : (
           data.map((user) => (
             <div class="app">
-              <div class="appimg">
-                <a href={user.webUrl}><img class="imgapp" src={`https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${user.webUrl}&size=96`} /></a>
-              </div><br />
-              <a class="name">{user.name}</a><br />
-              <a class="shared">Shared by {user.shared}</a>
+              <div class={user._id}>
+                <div class="appimg">
+                  <a href={user.webUrl}><img class="imgapp" src={`https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${user.webUrl}&size=96`} /></a>
+                </div><br />
+                <a class="name">{user.name}</a><br />
+                <a class="shared">Shared by {user.shared}</a>
+              </div>
             </div>
           ))
         )}

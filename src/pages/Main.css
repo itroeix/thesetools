@@ -97,8 +97,24 @@ h2 {
 .appimg {
     max-width: 100%;
     max-height: 100%;
-   }
+}
+
 .imgapp {
     height: 76px;
     width: 76px;
+}
+
+.forminput {
+    margin-bottom: 10px;
+}
+
+.categoryform {
+    outline: none;
+    padding: 8px 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #202020;
+    color: white;
+    border-radius: 35px;
 }
