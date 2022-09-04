@@ -27,7 +27,7 @@ const Main = () => {
             window.location.href = "/"
         })
         .catch((error) => {
-            setMessage("Some error occured or rate limited, try again in 1 minute");
+            setMessage("Share Tools disabled");
         });
 
     };
