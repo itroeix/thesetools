@@ -32,9 +32,8 @@ const Main = () => {
         <div>
             <div>
                 <h1>TheseTools</h1><br />
-                <h2>Share Tool Form</h2>
-                <button class="formbtn" onClick={goForm}>Go to Google Forms</button><br />
-                <a class="approvaltext">To avoid some problems, you have to wait for an approval.<br /> Maybe in the future I will add an automated system.</a>
+                <h2>Share Tool</h2>
+                <a class="approvaltext">Don't send anything inapropiate please</a>
             </div>
         </div>
 
