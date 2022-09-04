@@ -4,8 +4,20 @@ import React, { useState } from "react";
 
 
 const Main = () => {
+
+    var jsonData = {
+        category: "ide",
+        name: "Test",
+        lower: "test",
+        webUrl: "https://www.youtube.com/",
+        shared: "test"
+    }
     const goForm = () => {
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLScjK7VCsYA1cUYN-7vjqdNwolYausjZXNzOp3y8dRysQjGt2g/viewform?usp=sf_link";
+        fetch('http://localhost:4000/apps', { 
+            method: 'POST',
+            mode: 'cors',
+            body: JSON.stringify(jsonData) 
+        })
     }
     React.useEffect(() => {
         const json = localStorage.getItem("site-dark-mode");
