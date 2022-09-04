@@ -69,7 +69,7 @@ const Main = () => {
     if (e.key === "Enter") {
       const value = e.target.value
       const lower = value.toLowerCase()
-      const url = `http://localhost:4000/apps/search/${lower}`;
+      const url = `https://api.itroeix.xyz/apps/search/${lower}`;
       fetch(url)
         .then((response) => response.json())
         .then((json) => setData(json))
