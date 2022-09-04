@@ -13,7 +13,7 @@ const Main = () => {
     let handleSubmit = async (e) => {
         e.preventDefault();
 
-        axios.post("http://localhost:4000/apps", {
+        axios.post("https://api.itroeix.xyz/apps", {
             category: category,
             name: name,
             lower: name.toLowerCase(),
